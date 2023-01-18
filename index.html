@@ -1,13 +1,48 @@
 <html>
-
     <head>
         <title>Consumindo Api com AXIOS</title>
+        <link rel="stylesheet" href="src\css\style.css">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="main.js"></script>
     </head>
+    <body onload="hideCreateContactForm()">
+        <div id="controls">
+            <button id="get-contacts" onclick="loadData()">Listar Contatos</button>
+            <button type="submit" onclick="createContact()">Adicionar Contato</button>
+            <button id="update-contact" onclick="updateContact()">Atualizar Contato</button>
+            <button id="delete-contact" onclick="deleteContact()">Deletar Contato</button>
+        </div>
+        <div id="data-container"></div>
 
-    <body>
-        <div id="results"></div>
-    </body>
+        <form id="create-contact-form" class="hidden form-style">
+            <label for="condominio">Condomínio:</label>
+            <input type="text" id="condominio" name="condominio" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento" required>
+            <label for="cep">CEP:</label>
+            <input type="number" id="cep" name="cep" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required>
+            <label for="nome_sindico">Nome do Síndico:</label>
+            <input type="text" id="nome_sindico" name="nome_sindico">
+            <label for="tel_sindico">Telefone do Síndico:</label>
+            <input type="tel" id="tel_sindico" name="tel_sindico" required>
+            <label for="cel_sindico">Celular do Síndico:</label>
+            <input type="tel" id="cel_sindico" name="cel_sindico">
+            <label for="nome_zelador">Nome do Zelador:</label>
+            <input type="text" id="nome_zelador" name="nome_zelador">
+            <label for="tel_zelador">Telefone do Zelador:</label>
+            <input type="tel" id="tel_zelador" name="tel_zelador" required>
+            <label for="cel_zelador">Celular do Zelador:</label>
+            <input type="tel" id="cel_zelador" name="cel_zelador">
+            <label for="observacao">Observação:</label>
+            <input type="text" id="observacao" name="observacao">
 
-</html>
+        </form>
+    </html>
